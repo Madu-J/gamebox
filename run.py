@@ -1,34 +1,16 @@
-# Your code goes here.
-import random
+import pygame
+from pygame.locals import *
 
-print("Welcome to Game Box!")
-# Player chooses whether to play or quit
-player = input("Do you want to play Rock, Paper, Scissors Game?")
-print()
+pygame.init()
 
-if player.lower() != "yes":
-    quit()
-else:
-    print("Here is the rules: The computer will pick a random choice, but in normal contex the rock wins against scissors, paper wins against rock, and scissors wins against paper.")
-choose = ("rock", "paper", "scissors")
-player = None
-computer = random.choice(choose)
+screen_width = 800
+screen_height =800
 
-while player not in choose:
-    player = input("Make a choice (rock, paper, scissors): ")
+screen = pygame.display.set_mode((screen_width, screen_height))
+yellow = [255, 255, 255]
+blue = [255, 255, 255]
+pygame.display.set_caption('Game box')
 
-print(f"Player: {player}")
-print(f"Computer: {computer}")
+    pygame.display.update()
 
-if player == computer:
-    print("It's a tie ! ")
-elif player == "rock" and computer == "scissors":
-    print("You win ! ")
-elif player == "paper" and computer == "rock":
-    print("You win ! ")
-elif player == "scissors" and computer == "paper":
-    print("You win ! ")
-else:
-    print("You lose ! ")
-
-print("Thanks for playing ! ")
+pygame.quit()
