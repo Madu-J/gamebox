@@ -1,8 +1,8 @@
 #----------------------------------------------------- */
 def new_game():
     
-    choices = []
-    correct_choices = 0
+    guesses = []
+    correct_guesses = 0
     question_num = 1
 
     for key in questions:
@@ -10,26 +10,45 @@ def new_game():
         print(key)
         for i in options[question_num-1]:
             print(i)
-        choice = input('Choose (A, B, C, or D): ')
-        choice = choice.upper()
-        choices.append(choice)
+        guess = input('Choose (A, B, C or D): ')
+        guess = guess.upper()
+        guesses.append(guess)
 
-        correct_choices += check_answer(questions.get(key),choice)
+        correct_guesses += check_answer(questions.get(key),guess)
         question_num += 1
+    
+    display_score(correct_guesses, guesses)
     
 
 #----------------------------------------------------- */
-def check_answer(answer, choice):
+def check_answer(answer, guess):
     
-    if answer == choice:
+    if answer == guess:
         print('WELDONE! The answer is correct !')
         return 1
     else:
         print('Wrong Answer !')
         return 0
+
 #----------------------------------------------------- */
-def display_score():
-    pass
+def display_score(correct_guesses, guesses):
+    print("---------------------------------------------------")
+    print("Results")
+    print("---------------------------------------------------")
+
+    print("Answers: ", end="")
+    for i in questions:
+        print(questions.get(i), end=" ")
+    print()
+    
+    print("Guesses: ", end="")
+    for i in guesses:
+        print(i, end=" ")
+    print()
+
+    score = int((correct_guesses/len(questions)*100))
+    print("You have scored: "+str(score)+"%")
+
 #----------------------------------------------------- */
 def play_again():
     pass
