@@ -1,15 +1,21 @@
+import time
+
+start_time = time.time()
+
+#------------------------------------------------------------------------- */
 print("Welcome To Gamebox Quiz App !")
+
 # Let player choose if they want to play or quit
 player = input("Few Things About Sweden. Do You Want To Play? ")
 print()
+
 # Check If user condition is true. If yes then play else quit
 if player.lower() != "yes":
     quit()
 else:
     print("How To Play: The user will choose from options; A, B, C and D ")
 
-
-#----------------------------------------------------- */
+#------------------------------------------------------------------------- */
 def new_game():
     
     choices = []
@@ -21,7 +27,7 @@ def new_game():
         print(key)
         for i in options[question_num-1]:
             print(i)
-        choice = input('Choose (A, B, C, D): ')
+        choice = input('Please Choose (A, B, C, D): ')
         choice = choice.upper()
         choices.append(choice)
 
@@ -58,7 +64,11 @@ def display_score(correct_choices, choices):
     print()
 
     score = int((correct_choices/len(questions)*100))
-    print("Congratulations ! You have scored: "+str(score)+"%")
+    print("Congratulations ! You've scored... ! "+str(score)+"%")
+
+
+end_time = time.time()
+end_time = end_time - start_time
 
 #----------------------------------------------------- */
 def play_again():
@@ -103,3 +113,4 @@ while play_again():
     new_game()
 
 print("Thank You For Playing! Bye ! ")
+print(end_time)
