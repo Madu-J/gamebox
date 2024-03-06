@@ -1,3 +1,14 @@
+print("Welcome To Gamebox Quiz App !")
+# Let player choose if they want to play or quit
+player = input("Few Things About Sweden. Do You Want To Play? ")
+print()
+# Check If user condition is true. If yes then play else quit
+if player.lower() != "yes":
+    quit()
+else:
+    print("How To Play: The user will choose from options; A, B, C and D ")
+
+
 #----------------------------------------------------- */
 def new_game():
     
@@ -32,9 +43,9 @@ def check_answer(answer, choice):
 
 #----------------------------------------------------- */
 def display_score(correct_choices, choices):
-    print("---------------------------------------------------")
+    print("------------------------------------------------------")
     print("Results")
-    print("---------------------------------------------------")
+    print("------------------------------------------------------")
 
     print("Answers: ", end="")
     for i in questions:
@@ -51,7 +62,14 @@ def display_score(correct_choices, choices):
 
 #----------------------------------------------------- */
 def play_again():
-    pass
+    
+    gamebox = input("Would you like to play again? (yes/no): ")
+    gamebox = gamebox.upper()
+
+    if gamebox == "YES":
+        return True
+    else:
+        return False
 #----------------------------------------------------- */
 
 
@@ -80,3 +98,8 @@ options = [['A. Eastern Europe', 'B. Western Europe', 'C. Northern Europe', 'D. 
 ['A. Swedish House Mafia', 'B. Abba', 'C. Roxette', 'D. Europe']]
 
 new_game()
+
+while play_again():
+    new_game()
+
+print("Thank You For Playing! Bye ! ")
