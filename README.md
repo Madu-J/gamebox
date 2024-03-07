@@ -1,32 +1,102 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Gamebox App - Project 3
+![Gamebox app]()
 
-Welcome,
+Gamebox App live link -
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Purpose
+Gamebox App is a quiz app designed for people to engage their mind or test their knowledge in a kind coffee break situation. You can find the live link here - 
 
-## Reminders
+ Gamebox is easy to play game app, perfect for want to try out new things. User will go by choosing their prefer answers within the aphabet A, B, C and D.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The quiz has 10 questions in total and the player gets 10% per point on each question answered correctly.
 
-## Creating the Heroku app
+The questions flow in orderly, one after the other as next question displays once user picks an answer.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Correct]()
 
+![Wrong Answer]()
+
+At the end of the quiz the app displays user time spent by seconds and scores percentage.
+
+![Score]()
+
+This quiz game app demonstrate how Python works in a real-world context, and can be played by anyone who finds it interesting. The questions are carefully selected to make user to want to play more.
+
+The site is a fully responsive python game that will allow users to read a question regardless of the screen size.
+
+![Responsive Mockup]()
+
+## Features
+
+### Existing Features
+
+
+###  Gamebox App Heading
+
+- Featured at the top of the page is the Gamebox app heading and is easy to see for the users.
+Upon viewing the page, the user will be able to see the name of the game and a start game button!
+
+![Gamebox heading]()
+
+### The Game Area
+
+- The quiz game site has a welcome message for user followed by a question if user wants to play the quiz.
+
+![Gamebox user welcome note]()
+
+- If user types yes then the quiz rules will be displayed but if user types no then the game ends.
+![Gamebox App rules]()
+
+- The quiz are 10 questions that display one after the other when user chooses answer.
+- Once the user types in an answer, its irreversible. If player is correct it will display "Weldone! The answer is correct!" and if the answer is incorrect, it will display "Wrong Answer" and print the correct answer and this contines till the last question is answered.
+
+![Correct]()
+
+![Wrong Answer]()
+
+- At the end the user will get a thank you message followed by their score and as well a message to direct the user where to click if user wants to try again.
+![Thank you for playing]()
+
+### The Score Area
+
+- The uses will only see result at the end of the game.
+
+![score]()
+
+## First Time Visitor Goal
+
+- As a first-time user I want to easily understand what the site main purpose is all about.
+
+- As first-time user I use my phone often, so I want to view the website content clearly on my mobile.
+
+- As a first-time user I want to found the site interesting.
+
+## Returning Visitors Goals
+
+- As a returning use I want to play the game again
+
+### Features Left to Implement
+- 
+
+## Testing
+
+### Validator Testing
+- I have tested this project code by:
+- Pasting the code on PEP8 linter and there were no error found. ![PEP8 Python Validation]()
+- Tested after deployment on Code Institute Heroku terminal and it run successfully
+
+## Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku and the steps for deployment are as followed:
+### First step
+- Sign in to Heroku app
+- Create a new app with a unique name
+- Go to setting and create a _Config Var_ called `PORT`. Set the value to `8000`
+- Then click on  buildpacks and add the following:
 1. `heroku/python`
 2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+### Second step
+- Click on deploy at the top left side and select github to connect to github. Confirm your connection to github and search for the github repository name, click connect to link up the Heroku app creacted ealier with the repository.
+- Choose either automatic deploy or manual. I used manual which is deploy branch.
+- Allow the app to build until it shows successfully then click view and it takes me to my live deployed link.
