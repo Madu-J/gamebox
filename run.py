@@ -113,4 +113,4 @@ while play_again():
     new_game()
 
 print("Thank You For Playing! Bye ! ")
-print(end_time)
+print((end_time), "Seconds ")

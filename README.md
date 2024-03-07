@@ -48,7 +48,7 @@ Upon viewing the page, the user will be able to see the name of the game and a s
 ![Gamebox App rules]()
 
 - The quiz are 10 questions that display one after the other when user chooses answer.
-- Once the user types in an answer, its irreversible. If player is correct it will display "Weldone! The answer is correct!" and if the answer is incorrect, it will display "Wrong Answer" and print the correct answer and this contines till the last question is answered.
+- Once the user types in an answer, its irreversible. If player is correct it will display "Weldone! The answer is correct!" and if the answer is incorrect, it will print "Wrong Answer". At the end of the game result will be displayed and user can see both prefered answers and correct answers.
 
 ![Correct]()
 
@@ -59,7 +59,7 @@ Upon viewing the page, the user will be able to see the name of the game and a s
 
 ### The Score Area
 
-- The uses will only see result at the end of the game.
+- The user will only see result at the end of the game.
 
 ![score]()
 
