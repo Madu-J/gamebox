@@ -2,7 +2,7 @@ import time
 
 start_time = time.time()
 
-#------------------------------------------------------------------------- */
+
 print("Welcome To Gamebox Quiz App !")
 
 # Let player choose if they want to play or quit
@@ -15,9 +15,9 @@ if player.lower() != "yes":
 else:
     print("How To Play: The user will choose from options; A, B, C and D ")
 
-#------------------------------------------------------------------------- */
+
 def new_game():
-    
+
     choices = []
     correct_choices = 0
     question_num = 1
@@ -31,15 +31,14 @@ def new_game():
         choice = choice.upper()
         choices.append(choice)
 
-        correct_choices += check_answer(questions.get(key),choice)
+        correct_choices += check_answer(questions.get(key), choice)
         question_num += 1
-    
-    display_score(correct_choices, choices)
-    
 
-#----------------------------------------------------- */
+    display_score(correct_choices, choices)
+
+
 def check_answer(answer, choice):
-    
+
     if answer == choice:
         print('Weldone! The answer is correct !')
         return 1
@@ -47,7 +46,7 @@ def check_answer(answer, choice):
         print('Wrong Answer !')
         return 0
 
-#----------------------------------------------------- */
+
 def display_score(correct_choices, choices):
     print("------------------------------------------------------")
     print("Results")
@@ -57,22 +56,22 @@ def display_score(correct_choices, choices):
     for i in questions:
         print(questions.get(i), end=" ")
     print()
-    
+
     print("Choices: ", end="")
     for i in choices:
         print(i, end=" ")
     print()
 
     score = int((correct_choices/len(questions)*100))
-    print("Congratulations ! You've scored... ! "+str(score)+"%")
+    print("Congratulations ! You've scored... "+str(score)+"%")
 
 
 end_time = time.time()
 end_time = end_time - start_time
 
-#----------------------------------------------------- */
+
 def play_again():
-    
+
     gamebox = input("Would you like to play again? (yes/no): ")
     gamebox = gamebox.upper()
 
@@ -80,7 +79,6 @@ def play_again():
         return True
     else:
         return False
-#----------------------------------------------------- */
 
 
 questions = {
@@ -96,16 +94,36 @@ questions = {
     'Which music band is the most popular in Sweden? ': 'B'
 }
 
-options = [['A. Eastern Europe', 'B. Western Europe', 'C. Northern Europe', 'D. Middle East'],
-['A. Over 100 years', 'B. Over 500 years', ' C. Over 50 years',  'D. Over 1000 years'],
-['A. About 500295 km', 'B. About 450295 km', 'C. About 250295 km', 'D. About 100295 km'],
-['A.1823', 'B.1553', 'C. 1523', 'D. 1630'],
-['A. Kronor (SEK)', 'B. Euro', 'C. NOK', 'D. USD'],
-['A. Germany and Poland', 'B. Italy and Spain', 'C. Holand and Hungary', 'D. Finland and Norway'],
-['A. Approximately 200 languages', 'B. Approximately 300 languages', 'C. Only one language', 'D. Only two official languages'],
-['A. Three countries', 'B. Up to thirty countries', 'C. Two countries', 'D. Only one country'],
-['A. Smögås', 'B. Potato chips', 'C. Kebab pizza', 'D. Köttbullar potatismos, gräddsås recipe'],
-['A. Swedish House Mafia', 'B. Abba', 'C. Roxette', 'D. Europe']]
+options = [[
+    'A. Eastern Europe', 'B. Western Europe',
+    'C. Northern Europe', 'D. Middle East'
+    ],
+    [
+        'A. Over 100 years', 'B. Over 500 years',
+        'C. Over 50 years',  'D. Over 1000 years'
+        ],
+    [
+        'A. About 500295 km', 'B. About 450295 km',
+        'C. About 250295 km', 'D. About 100295 km'
+             ],
+        [
+            'A.1823', 'B.1553', 'C. 1523', 'D. 1630'],
+        [
+            'A. Kronor (SEK)', 'B. Euro', 'C. NOK', 'D. USD'],
+        [
+            'A. Germany and Poland', 'B. Italy and Spain',
+            'C. Holand and Hungary', 'D. Finland and Norway'],
+        [
+            'A. Approximately 200 languages', 'B. Approximately 300 languages',
+            'C. Only one language', 'D. Only two official languages'],
+        [
+            'A. Three countries', 'B. Up to thirty countries',
+            'C. Two countries', 'D. Only one country'],
+        [
+            'A. Smögås', 'B. Potato chips', 'C. Kebab pizza',
+            'D. Köttbullar potatismos, gräddsås recipe'],
+        [
+            'A. Swedish House Mafia', 'B. Abba', 'C. Roxette', 'D. Europe']]
 
 new_game()
 
@@ -113,4 +131,4 @@ while play_again():
     new_game()
 
 print("Thank You For Playing! Bye ! ")
-print((end_time), "Seconds ")
+print(round(end_time), "Seconds Left ! ")
