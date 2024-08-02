@@ -93,24 +93,28 @@ guesses = []
 score = 0
 que_number = 0
 
+player_choice = ("A, B, C, D")
+
+while player_choice not in correct_answer:
 # Display all questions
-for que in questions:
-    print("------------------------------")
-    print(que)
+    for que in questions:
+        print("------------------------------")
+        print(que)
 
-# Display options
-    for choice in options[que_number]:
-        print(choice)
+    # Display options
+        for choice in options[que_number]:
+            print(choice)
+        player_choice = input("Make a choice (A, B, C, D): ").upper()
+            
+            
+        guesses.append(player_choice)
+        if player_choice == correct_answer[que_number]:
+            score += 1
+            print("Your answer is correct!")  # Print only when user answer is correct
+        else:
+            print("Wrong answer!")  # Print when user answer is wrong
+            print()
+            print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
 
-    player_choice = input("Make a choice (A, B, C, D): ").upper()
-    guesses.append(player_choice)
-    if player_choice == correct_answer[que_number]:
-        score += 1
-        print("Your answer is correct!")  # Print only when user answer is correct
-    else:
-        print("Wrong answer!")  # Print when user answer is wrong
-        print()
-        print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
-
-    que_number += 1
-    
+        que_number += 1
+        
