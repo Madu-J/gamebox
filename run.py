@@ -6,15 +6,42 @@ start_time = time.time()
 print("Welcome To Gamebox Quiz App !")
 
 # Let player choose if they want to play or quit
-player = input("Few Things About Sweden. Do You Want To Play? ")
+player = input("Few Things About Sweden. Do You Want To Play? y/n ")
 print()
 
 # Check If user condition is true. If yes then play else quit
-if player.lower() != "yes":
+if player.lower() != "y":
+    quit("You chose to quit the game, thanks for stoping by")
+else:
+    print("Here is the rules for the game ")
+    print(" . There are 10 questions in total, and 4 options ")
+    print(" . Choose from options; A, B, C and D ")
+    print(" . The correct answer will appear if your answer is incorrect")
+    print(" . Your score will be displayed at the end of the game")
+    print(" . Please note: You can not exit the game once you start.")
+    print()
+
+    player = input(" . If you are ready, type 'S to start or Q to quit' ")
+
+if player.lower() != "s":
     quit()
 else:
-    print("How To Play: The user will choose from options; A, B, C and D ")
+    print("Okay, lets' go :)")
 
+print()
+# Let player enter name
+user_name = input("Enter your name: ").capitalize()
+# The strip() method ensures that something has to be entered and
+# the isalpha() method ensures that only letters can be entered
+while not user_name.strip() or not user_name.isalpha():
+    user_name = input("The input field must not be left blank.\n"
+                      "The user name must not contain any spaces, "
+                      "only letters are permitted!\n"
+                      "Please enter your Name:\n")
+print()
+"Name: "
+print("Hi,", str(user_name) + "!" + " The game starts now")
+# End player name
 
 def new_game():
 
