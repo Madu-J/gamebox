@@ -43,71 +43,6 @@ print()
 print("Hi,", str(user_name) + "!" + " The game starts now")
 # End player name
 
-def new_game():
-
-    choices = []
-    correct_choices = 0
-    question_num = 1
-
-    for key in questions:
-        print("------------------------------------------------------")
-        print(key)
-        for i in options[question_num-1]:
-            print(i)
-        choice = input('Please Choose (A, B, C, D): ')
-        choice = choice.upper()
-        choices.append(choice)
-
-        correct_choices += check_answer(questions.get(key), choice)
-        question_num += 1
-
-    display_score(correct_choices, choices)
-
-
-def check_answer(answer, choice):
-
-    if answer == choice:
-        print('Weldone! The answer is correct !')
-        return 1
-    else:
-        print('Wrong Answer !')
-        return 0
-
-
-def display_score(correct_choices, choices):
-    print("------------------------------------------------------")
-    print("Results")
-    print("------------------------------------------------------")
-
-    print("Answers: ", end="")
-    for i in questions:
-        print(questions.get(i), end=" ")
-    print()
-
-    print("Choices: ", end="")
-    for i in choices:
-        print(i, end=" ")
-    print()
-
-    score = int((correct_choices/len(questions)*100))
-    print("Congratulations ! You've scored... "+str(score)+"%")
-
-
-end_time = time.time()
-end_time = end_time - start_time
-
-
-def play_again():
-
-    gamebox = input("Would you like to play again? (yes/no): ")
-    gamebox = gamebox.upper()
-
-    if gamebox == "YES":
-        return True
-    else:
-        return False
-
-
 questions = {
     "Which geografical location is Sweden?: ": "C",
     "How old is Sweden as a country?: ": "D",
@@ -152,10 +87,30 @@ options = [[
         [
             'A. Swedish House Mafia', 'B. Abba', 'C. Roxette', 'D. Europe']]
 
-new_game()
+correct_answer = ("C", "D", "B", "C", "A", "D", "A", "C", "D", "B")
 
-while play_again():
-    new_game()
+guesses = []
+score = 0
+que_number = 0
 
-print("Thank You For Playing! Bye ! ")
-print(round(end_time), "Seconds Left ! ")
+# Display all questions
+for que in questions:
+    print("------------------------------")
+    print(que)
+
+# Display options
+    for choice in options[que_number]:
+        print(choice)
+
+    player_choice = input("Make a choice (A, B, C, D): ").upper()
+    guesses.append(player_choice)
+    if player_choice == correct_answer[que_number]:
+        score += 1
+        print("Your answer is correct!")  # Print only when user answer is correct
+    else:
+        print("Wrong answer!")  # Print when user answer is wrong
+        print()
+        print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
+
+    que_number += 1
+    
