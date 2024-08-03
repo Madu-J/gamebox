@@ -43,6 +43,7 @@ print()
 print("Hi,", str(user_name) + "!" + " The game starts now")
 # End player name
 
+# Quiz questions
 questions = {
     "Which geografical location is Sweden?: ": "C",
     "How old is Sweden as a country?: ": "D",
@@ -56,6 +57,7 @@ questions = {
     'Which music band is the most popular in Sweden? ': 'B'
 }
 
+# Quiz options
 options = [[
     'A. Eastern Europe', 'B. Western Europe',
     'C. Northern Europe', 'D. Middle East'
@@ -117,4 +119,26 @@ while player_choice not in correct_answer:
             print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
 
         que_number += 1
-        
+
+
+print("------------------------------------------")
+print("Thank you", str(user_name) + " for playing! See the answers & your result below ") 
+print()  
+
+# All correct answer
+print("Correct Answers: ", end="")
+for answer in correct_answer:
+    print(answer, end=" ")
+print()
+
+# User guesses
+print("Your guesses: ", end="")
+for player_choice in guesses:
+    print(player_choice, end=" ")
+print()
+
+# Score area
+print("------------------------------------------")
+score = int(score / len(questions) * 100)  # Check score py pencentage
+print(f"You scored: {score}%")
+print("Thanks for playing gamebox. Byeee!")
