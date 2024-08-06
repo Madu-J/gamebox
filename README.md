@@ -74,7 +74,7 @@ The site is a fully responsive python game that will allow users to read a quest
 
 ## Returning Visitors Goals
 
-- As a returning use I want to play the game again
+- As a returning user I want to play the game again
 
 ### Features Left to Implement
 - 
@@ -83,12 +83,12 @@ The site is a fully responsive python game that will allow users to read a quest
 
 ### Validator Testing
 - I have tested this project code by:
-- Pasting the code on PEP8 linter and there were no error found. ![PEP8 Python Validation](readme/validator.png)
+- Pasting the code on PEP8 linter and there were no error found. ![PEP8 Python Validation](readme/validationfixed.png)
 - Tested after deployment on Code Institute Heroku terminal and it run successfully.
 
 ### Debug
 
-- Wrong identation fixed.
+- Wrong identation fixed. ![PEP8 Python Validation](readme/validation.png)
 
 
 ## Deployment
@@ -110,3 +110,4 @@ This project was deployed using Code Institute's mock terminal for Heroku and th
 
 ### Credit 
 - Bro Code Youtube Channel
+- Google Search Engine
