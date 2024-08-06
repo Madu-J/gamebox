@@ -123,6 +123,7 @@ for que in questions:
 
     que_number += 1
 
+# Clear gameboard to print user result
 os.system('clear')
 # Appreciation message
 print("------------------------------------------")
