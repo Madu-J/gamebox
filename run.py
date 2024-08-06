@@ -3,10 +3,10 @@ import time
 start_time = time.time()
 
 
-print("Welcome To Gamebox Quiz App !")
-
+print("Welcome To Gamebox Quiz App!")
+print("------------------------------")
 # Let player choose if they want to play or quit
-player = input("Few Things About Sweden. Do You Want To Play? y/n ")
+player = input("Few things to know about Sweden. Do you want to play? y/n ")
 print()
 
 # Check If user condition is true. If yes then play else quit
@@ -26,7 +26,8 @@ else:
 if player.lower() != "s":
     quit()
 else:
-    print("Okay, lets' go :)")
+    print("-----------------")
+    print(" Okay, let's go!")
 
 print()
 # Let player enter name
@@ -37,10 +38,10 @@ while not user_name.strip() or not user_name.isalpha():
     user_name = input("The input field must not be left blank.\n"
                       "The user name must not contain any spaces, "
                       "only letters are permitted!\n"
-                      "Please enter your Name:\n")
+                      "Please enter your Name:\n").capitalize()
 print()
 "Name: "
-print("Hi,", str(user_name) + "!" + " The game starts now")
+print("Hi,", str(user_name) + "!" + " The game starts now.")
 # End player name
 
 # Quiz questions
@@ -97,30 +98,33 @@ que_number = 0
 
 player_choice = ("A, B, C, D")
 
-while player_choice not in correct_answer:
 # Display all questions
-    for que in questions:
-        print("------------------------------")
-        print(que)
+for que in questions:
+    print("------------------------------")
+    print(que)
 
-    # Display options
-        for choice in options[que_number]:
-            print(choice)
+# Display options
+    for choice in options[que_number]:
+        print(choice)
+
+    player_choice = input("Make a choice (A, B, C, D): ").upper()
+    while player_choice not in correct_answer:  # Keep runing till user makes a valid choice
+        print("Invalid input")
         player_choice = input("Make a choice (A, B, C, D): ").upper()
-            
-            
-        guesses.append(player_choice)
-        if player_choice == correct_answer[que_number]:
-            score += 1
-            print("Your answer is correct!")  # Print only when user answer is correct
-        else:
-            print("Wrong answer!")  # Print when user answer is wrong
-            print()
-            print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
 
-        que_number += 1
+    guesses.append(player_choice)
+    if player_choice == correct_answer[que_number]:
+        score += 1
+        print()
+        print("Your answer is correct!")  # Print only when user answer is correct
+    else:
+        print("Wrong answer!")  # Print when user answer is wrong
+        print()
+        print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
 
+    que_number += 1
 
+# Appreciation message
 print("------------------------------------------")
 print("Thank you", str(user_name) + " for playing! See the answers & your result below ") 
 print()  
