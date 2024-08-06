@@ -108,6 +108,10 @@ This project was deployed using Code Institute's mock terminal for Heroku and th
 - Choose either automatic deploy or manual. I used manual which is deploy branch.
 - Allow the app to build until it shows successfully then click view and it takes me to my live deployed link.
 
-### Credit 
+## Credit 
 - Bro Code Youtube Channel
 - Google Search Engine
+
+<br>
+
+[Back to top](#top)
