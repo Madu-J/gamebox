@@ -107,7 +107,8 @@ for que in questions:
         print(choice)
 
     player_choice = input("Make a choice (A, B, C, D): ").upper()
-    while player_choice not in correct_answer:  # Keep runing till user makes a valid choice
+# Keep runing till user makes a valid choice
+    while player_choice not in correct_answer:
         print("Invalid input")
         player_choice = input("Make a choice (A, B, C, D): ").upper()
 
@@ -115,11 +116,13 @@ for que in questions:
     if player_choice == correct_answer[que_number]:
         score += 1
         print()
-        print("Your answer is correct!")  # Print only when user answer is correct
+# Print only when user answer is correct
+        print("Your answer is correct!")
     else:
         print("Wrong answer!")  # Print when user answer is wrong
         print()
-        print(f"The answer is {correct_answer[que_number]} ")  # print correct answer
+# print correct answer
+        print(f"The answer is {correct_answer[que_number]} ")
 
     que_number += 1
 
@@ -127,8 +130,9 @@ for que in questions:
 os.system('clear')
 # Appreciation message
 print("------------------------------------------")
-print("Thank you", str(user_name) + " for playing! See the answers & your result below; ") 
-print()  
+print("Thank you", str(
+    user_name) + " for playing! See the answers & your result below; ")
+print()
 
 # All correct answer
 print("Correct Answers: ", end="")
