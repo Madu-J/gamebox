@@ -95,7 +95,7 @@ The site is a fully responsive python game that will allow users to read a quest
 
 ![Wrong Answer](readme/wrong.png)
 
-- At the end of the game, the user will get a thank you message followed by their score and as well a message to direct the user where to click if user wants to try again.
+- At the end of the game, the user will get a thank you message followed by their score and as well a message to direct the user where to click if user wants to try again. OS is used to clear the gameboard before displaying user result.
 ![Thank you for playing](readme/result.png)
 
 ### The Score Area
@@ -111,36 +111,59 @@ The site is a fully responsive python game that will allow users to read a quest
 
 ### Validator Testing
 - I have tested this project code by:
-- Pasting the code on PEP8 linter and there were no error found. ![PEP8 Python Validation](readme/validationfixed.png)
+- Pasting the code on PEP8 linter and there were no error found. 
+![PEP8 Python Validation](readme/validationfixed.png)
 - Tested after deployment on Code Institute Heroku terminal and it run successfully.
 
 ### Debug
 
 - Wrong identation fixed. ![PEP8 Python Validation](readme/validation.png)
-![PEP8 Python Validation](readme/no-error.png)
 
+## Technologies used
+
+### Languages used
+Python is used for the project. For the landingpage HTML, CSS were used to customised the look.
+
+### Software used
+Gitpod - To code the project. <br>
+Git - For version control. <br>
+Github - To store to project. <br>
+Heroku – To deploy the project. <br>
+Ci Python Linter – To validate the python code. <br>
+
+### Data model
+Data is stored in variables in this project. This includes the user_name which is entered by the player and is also printed in the terminal to address the player by name.<br>
+In addition, inputs from the player are processed in the menus.
 
 ## Deployment
+The project was coded with codeinstitute-ide.net, stored on github and then deployed on Heroku. 
+That is how the deployment was done:
 
-This project was deployed using Code Institute's mock terminal for Heroku and the steps for deployment are as followed:
-### First step
-- Sign in to Heroku app
-- Create a new app with a unique name
-- Go to setting and create a _Config Var_ called `PORT`. Set the value to `8000`
-- Then click on  buildpacks and add the following:
-1. `heroku/python`
-2. `heroku/nodejs`
+1.  Pushed the latested code to Github.
+2.	Log in to Heroku or create an account first.
+3.	Click on the New Button on the dashboard in the top right corner.
+4.	Click on "Create new app".
+5.	Select the relevant region. In my case, I chose Europe.
+6.  Select an app name that does not yet exist on heroku.
+7.	Click on the "Create app" button.
+8.	Click on the settings tab.
+9.	Scroll to the buildpacks and click on "add buildpack," select "Python," and click "Add Buildpack".
+10.	Repeat last step and add "node.js" buildpack. <br>
+    IMPORTANT: First the python buildpack must be displayed, then the pack from node.js. It can be moved via drag and drop. 
+11.	Click on the deploy tab.
+12.	Click on Github as the deployment method.
+13.	Search for the repository name and click on conncet.
+14.	Select Enable Automatic Deploys"
+15. Click on "Deploy Branch"
+16. Click on the "View" button which leads to the deployed app
 
-### Second step
-- Click on deploy at the top left side and select github to connect to github. Confirm your connection and 
-  search for the github repository name, click connect to link up the Heroku app earlier creacted with the repository.
-- Choose either automatic deploy or manual. I used manual which is deploy branch.
-- Allow the app to build until it shows successfully then click view and it takes me to my live deployed link.
+### Content for the project
+The content of this project was written by Madu Omenka.
 
 ## Credit 
 - Bro Code Youtube Channel
 - Google Search Engine
 
 <br>
-
+**This project is for educational use only and was created for the Code Institute course Full stack software development byMadu Omenka.**
 [Back to top](#top)
