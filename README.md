@@ -1,7 +1,6 @@
 # Gamebox App - Project 3
-![Gamebox app]()
 
-Gamebox App live link - https://gamebox-quiz-app-bd65f9b140e9.herokuapp.com/
+Gamebox App live link - [Open game on browser](https://gamebox-quiz-app-bd65f9b140e9.herokuapp.com/)
 
 ### Introduction to the project
 
@@ -103,6 +102,7 @@ The site is a fully responsive python game that will allow users to read a quest
 - The user will only see result at the end of the game.
 
 ![score](readme/secore.png)
+
 ![answers](readme/answers.png)
 
 ### Features Left to Implement
