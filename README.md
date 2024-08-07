@@ -23,7 +23,7 @@ First, the player is asked if he wants to play giving option to play or quit. If
 
 - People who like Browsergamers.
 - People who want to pass some free time.
-- People who want to like quiz game.
+- People who like quiz game.
 
 ### User story
 
@@ -85,6 +85,16 @@ The site is a fully responsive python game that will allow users to read a quest
 ![Gamebox App rules](readme/game-rules.png)
 ![Gamebox App quit](readme/quit-game.png)
 
+- If user choose to play You will then be asked to enter your name.
+
+![User name](readme/user-name.png)
+
+Only letters are allowed when entering names. If something else is entered or the field is left blank, a message appears: The text field must not be left blank and only letters are permitted!
+
+![Start screen error message](readme/name-error-message.png "Error message when entering a username that is not valid.")
+
+If a valid name has been entered, the player will be addressed personally by name, and the questions starts to display one after the other.
+
 - Once the user types in an answer, its irreversible. If player is correct it will display "Weldone! The answer is correct!" and 
  and if user input is not A, B, C OR D it will print Invalid input telling user to choose A,B,C,D. And if the answer is incorrect, it will print "Wrong Answer" and print the correct answer
 
@@ -118,6 +128,7 @@ The site is a fully responsive python game that will allow users to read a quest
 ### Debug
 
 - Wrong identation fixed. ![PEP8 Python Validation](readme/validation.png)
+- While loop is used in error handling, making sure user only use valid input.
 
 ## Technologies used
 
